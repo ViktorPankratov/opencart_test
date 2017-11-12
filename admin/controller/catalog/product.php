@@ -403,6 +403,7 @@ class ControllerCatalogProduct extends Controller {
 		$data['column_action'] = $this->language->get('column_action');
 
 		$data['entry_name'] = $this->language->get('entry_name');
+		$data['entry_alter_name'] = $this->language->get('entry_alter_name');
 		$data['entry_model'] = $this->language->get('entry_model');
 		$data['entry_price'] = $this->language->get('entry_price');
 		$data['entry_quantity'] = $this->language->get('entry_quantity');
@@ -560,6 +561,7 @@ class ControllerCatalogProduct extends Controller {
 		$data['text_amount'] = $this->language->get('text_amount');
 
 		$data['entry_name'] = $this->language->get('entry_name');
+		$data['entry_alter_name'] = $this->language->get('entry_alter_name');
 		$data['entry_description'] = $this->language->get('entry_description');
 		$data['entry_meta_title'] = $this->language->get('entry_meta_title');
 		$data['entry_meta_description'] = $this->language->get('entry_meta_description');
