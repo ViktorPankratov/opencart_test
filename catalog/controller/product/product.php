@@ -157,7 +157,6 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
-
 		if ($product_info) {
 			$url = '';
 
@@ -215,6 +214,7 @@ class ControllerProductProduct extends Controller {
 			);
 
 			$this->document->setTitle($product_info['meta_title']);
+			$this->document->setAlterName($product_info['alter_name']);
 			$this->document->setDescription($product_info['meta_description']);
 			$this->document->setKeywords($product_info['meta_keyword']);
 			$this->document->addLink($this->url->link('product/product', 'product_id=' . $this->request->get['product_id']), 'canonical');
@@ -225,6 +225,7 @@ class ControllerProductProduct extends Controller {
 			$this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css');
 
 			$data['heading_title'] = $product_info['name'];
+			$data['heading_alter_name'] = $product_info['alter_name'];
 
 			$data['text_select'] = $this->language->get('text_select');
 			$data['text_manufacturer'] = $this->language->get('text_manufacturer');
